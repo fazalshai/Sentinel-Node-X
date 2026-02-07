@@ -1,0 +1,45 @@
+name: Sentinel-Node X
+description: "Compliance & Risk agentic architecture for Deriv AI Talent Sprint."
+version: "2.0"
+
+agents:
+  - name: Orchestrator
+    role: "Manager"
+    description: "Manages the autonomous triage workflow using LangGraph state machine logic."
+    model: "gemini-1.5-pro-002"
+    skills:
+      - skills/orchestrator
+    tools:
+      - notify_user
+      - read_file
+      - write_file
+
+  - name: EvidenceCollector
+    role: "Worker"
+    description: "Fetches metadata (IP, Location, Amount) for investigations."
+    model: "gemini-1.5-pro-002"
+    skills:
+      - skills/evidence
+    tools:
+      - random_number_generator # Simulated
+      - read_file
+
+  - name: TemporalAnalyst
+    role: "Worker"
+    description: "Runs the Shift Engine to detect behavioral anomalies."
+    model: "gemini-1.5-pro-002"
+    skills:
+      - skills/temporal_analyst
+    tools:
+      - read_file
+      - analyze_csv # Simulated
+
+  - name: ComplianceRadar
+    role: "Worker"
+    description: "Checks high-confidence keys against UAE AML and EOCN regulations using Grounding."
+    model: "gemini-1.5-pro-002"
+    skills:
+      - skills/compliance_radar
+    tools:
+      - google_search_grounding
+      - read_file

@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  sentinel_api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - MODEL_NAME=gemini-1.5-pro
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+
+  # This placeholder represents where your .NET 8 Gateway would connect
+  dotnet_bridge:
+    image: mcr.microsoft.com/dotnet/sdk:8.0
+    command: echo "Ready to handle 1.25M+ event stream"

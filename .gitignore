@@ -1,0 +1,19 @@
+# Secrets
+.env
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node
+node_modules/
+npm-debug.log
+
+# C# / .NET
+bin/
+obj/
+.vscode/
+*.user
