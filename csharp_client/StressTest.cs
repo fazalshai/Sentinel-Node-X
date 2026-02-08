@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 public class StressTester {
     private readonly HttpClient _client = new HttpClient { 
-        BaseAddress = new Uri("http://localhost:8000"),
+        BaseAddress = new Uri("http://127.0.0.1:8000"),
         Timeout = TimeSpan.FromMinutes(2) 
     };
 

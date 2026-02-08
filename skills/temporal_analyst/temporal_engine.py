@@ -6,28 +6,23 @@ def calculate_fuzzy_risk(z_score, velocity_conflict):
     SOFT COMPUTING: Fuzzy Risk Inference Engine.
     Handles uncertainty rather than binary thresholds.
     """
-    # 1. Fuzzification of Z-Score
-    # We map the Z-score into a "Susceptibility" degree (0.0 to 1.0)
+    # 1. Fuzzification of Z-Score (0.0 to 1.0 risk)
     z_risk = min(1.0, max(0.0, (z_score - 1.0) / 4.0)) 
     
-    # 2. Fuzzification of Velocity
-    # Velocity isn't just True/False; it's a hard weight in Soft Computing
+    # 2. Fuzzification of Velocity (Binary weight in Soft Computing)
     vel_risk = 1.0 if velocity_conflict else 0.0
     
     # 3. Soft Weighted Inference
-    # We weight the statistical anomaly and the physics impossibility
-    # This is the "Soft" part: the system balances competing factors
-    fuzzy_score = (z_risk * 0.5) + (vel_risk * 0.5)
+    # Balances statistical anomaly and physical impossibility
+    fuzzy_score = (z_risk * 0.4) + (vel_risk * 0.6)
     
     # 4. Defuzzification (Decision)
     if fuzzy_score >= 0.85:
         action = "AUTONOMOUS_FREEZE"
     elif fuzzy_score >= 0.6:
-        action = "SOFT_RESTRICTION_REQUIRED"
-    elif fuzzy_score >= 0.3:
-        action = "MONITOR_INTENSELY"
+        action = "SOFT_RESTRICTION"
     else:
-        action = "LOW_RISK_CLEAR"
+        action = "MONITOR_INTENSELY"
         
     return round(fuzzy_score, 2), action
 
