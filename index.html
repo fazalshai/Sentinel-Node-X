@@ -1,108 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sentinel-Node X | Autonomous Compliance</title>
+    <title>Sentinel-Node X | AI Financial Crime Detection</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body { font-family: 'Outfit', sans-serif; }
-        .glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        body {
+            font-family: 'Outfit', sans-serif;
         }
+
+        .glass {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
         .gradient-text {
             background: linear-gradient(to right, #60a5fa, #34d399);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        .glow {
+            box-shadow: 0 0 20px rgba(52, 211, 153, 0.2);
+        }
     </style>
 </head>
-<body class="bg-slate-950 text-white min-h-screen flex flex-col items-center justify-center p-4 relative overflow-hidden">
 
-    <!-- Background Effects -->
-    <div class="absolute top-0 left-0 w-96 h-96 bg-blue-600/20 rounded-full blur-[128px] pointer-events-none"></div>
-    <div class="absolute bottom-0 right-0 w-96 h-96 bg-emerald-600/20 rounded-full blur-[128px] pointer-events-none"></div>
+<body class="bg-slate-950 text-white min-h-screen relative overflow-x-hidden selection:bg-emerald-500/30">
 
-    <main class="max-w-6xl w-full z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        
-        <!-- Left Column: The Pitch -->
-        <div class="space-y-8">
-            <div class="inline-block px-4 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-mono tracking-wider">
-                PATENT APP: 202441077282
-            </div>
-            
-            <h1 class="text-6xl md:text-8xl font-black leading-tight">
-                Sentinel<br>
-                <span class="gradient-text">Node X</span>
-            </h1>
-            
-            <p class="text-xl text-slate-400 max-w-lg leading-relaxed">
-                The world's first High-Concurrency Autonomous Compliance Orchestrator. 
-                Replacing rigid rules with <span class="text-white font-bold">Temporal Intelligence</span> and <span class="text-white font-bold">Fuzzy Logic</span>.
-            </p>
-
-            <div class="grid grid-cols-2 gap-4">
-                <div class="p-6 glass rounded-2xl">
-                    <div class="text-4xl font-mono font-bold text-white">1,147</div>
-                    <div class="text-sm text-slate-500 uppercase tracking-widest mt-2">TPS Benchmark</div>
-                </div>
-                <div class="p-6 glass rounded-2xl">
-                    <div class="text-4xl font-mono font-bold text-emerald-400">97.5%</div>
-                    <div class="text-sm text-slate-500 uppercase tracking-widest mt-2">Noise Reduction</div>
-                </div>
-            </div>
-
-            <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                <a href="/frontend" class="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-blue-500/25 text-center flex items-center justify-center gap-2">
-                    <span>🚀</span> Launch Dashboard
-                </a>
-                <a href="#" class="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all border border-slate-700 text-center">
-                    View Live Core (AWS)
-                </a>
-            </div>
+    <!-- Background Elements -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[100px]"></div>
+        <div
+            class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-emerald-600/10 rounded-full blur-[100px]">
         </div>
+    </div>
 
-        <!-- Right Column: Visuals -->
-        <div class="flex flex-col gap-6">
-            <!-- Video Placeholder -->
-            <div class="glass p-2 rounded-3xl aspect-video relative overflow-hidden group">
-                <div class="absolute inset-0 bg-slate-900 flex items-center justify-center">
-                    <span class="text-slate-600 text-lg font-mono">[ DEMO VIDEO PLACEHOLDER ]</span>
-                </div>
-                 <!-- Note: Replace the src below with your actual video or image -->
-                <img src="/api/placeholder/800/450" alt="Sentinel Demo" class="w-full h-full object-cover rounded-2xl opacity-50 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay">
-                
-                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                     <div class="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
-                        <div class="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
-                     </div>
-                </div>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+                <span class="font-bold text-xl tracking-tight">Sentinel<span class="text-emerald-400">Node
+                        X</span></span>
             </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+                <a href="#challenge" class="hover:text-white transition-colors">The Challenge</a>
+                <a href="#solution" class="hover:text-white transition-colors">The Solution</a>
+                <a href="#tech" class="hover:text-white transition-colors">Tech Stack</a>
+            </div>
+            <a href="/frontend"
+                class="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold rounded-lg transition-all shadow-lg hover:shadow-blue-500/25 flex items-center gap-2">
+                Launch Dashboard <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </nav>
 
-            <!-- Team Section -->
-            <div class="glass p-6 rounded-3xl">
-                <h3 class="text-slate-400 text-sm font-bold uppercase tracking-widest mb-4">Engineering Team</h3>
-                <div class="flex items-center gap-4">
-                    <div class="w-16 h-16 rounded-full bg-slate-800 border-2 border-slate-700 overflow-hidden">
-                        <!-- User's Team Photo Placeholder -->
-                        <div class="w-full h-full bg-gradient-to-tr from-blue-500 to-purple-600"></div>
+    <!-- Hero Section -->
+    <header class="relative z-10 pt-32 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 text-xs font-mono tracking-wider">
+                    <span class="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                    PATENT APP: 202441077282
+                </div>
+
+                <h1 class="text-6xl md:text-7xl font-black leading-tight">
+                    Find the fraud <br>
+                    <span class="gradient-text">nobody's looking for.</span>
+                </h1>
+
+                <p class="text-xl text-slate-400 max-w-xl leading-relaxed">
+                    Financial crime teams are drowning in noise. Sentinel-Node X uses **Temporal Intelligence** to turn
+                    2,000 weekly alerts into 50 high-confidence cases.
+                </p>
+
+                <div class="grid grid-cols-2 gap-4 max-w-md">
+                    <div class="p-6 glass rounded-2xl border-l-4 border-emerald-500">
+                        <div class="text-3xl font-mono font-bold text-white">1,147</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-widest mt-2">TPS Benchmark</div>
                     </div>
-                    <div>
-                        <div class="font-bold text-lg">Fazal Shaik</div>
-                        <div class="text-sm text-blue-400">Lead Engineer & Patent Holder</div>
+                    <div class="p-6 glass rounded-2xl border-l-4 border-blue-500">
+                        <div class="text-3xl font-mono font-bold text-white">97.5%</div>
+                        <div class="text-xs text-slate-500 uppercase tracking-widest mt-2">Noise Reduction</div>
                     </div>
                 </div>
             </div>
+
+            <!-- Hero Visual / Dashboard Preview -->
+            <div class="relative group">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-500 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity">
+                </div>
+                <div class="relative glass rounded-3xl p-2 border border-slate-700/50 overflow-hidden">
+                    <!-- Placeholder representing the Dashboard interface -->
+                    <div
+                        class="bg-slate-900 rounded-2xl p-6 aspect-video flex flex-col items-center justify-center text-center space-y-4">
+                        <div class="w-16 h-16 bg-slate-800 rounded-full flex items-center justify-center mb-2">
+                            <i data-lucide="activity" class="w-8 h-8 text-blue-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-200">Live Trash Filtration Funnel</h3>
+                        <p class="text-slate-500 text-sm">Real-time Soft Computing Engine Active</p>
+                        <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden mt-4 max-w-xs">
+                            <div class="h-full bg-emerald-500 w-[97%]"></div>
+                        </div>
+                    </div>
+                    <!-- Link to AWS Core -->
+                    <a href="#"
+                        class="absolute bottom-4 right-4 text-xs font-mono text-slate-500 hover:text-white transition-colors">
+                        Connected to AWS Core (Live)
+                    </a>
+                </div>
+            </div>
         </div>
+    </header>
 
-    </main>
+    <!-- The Problem & Challenge -->
+    <section id="challenge" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-white flex items-center gap-3">
+                        <i data-lucide="alert-triangle" class="text-red-500"></i> The Problem
+                    </h2>
+                    <div class="space-y-6 text-slate-400 leading-relaxed">
+                        <p>
+                            <strong class="text-white">Alert Fatigue:</strong> Compliance teams get 2,000+ alerts/week.
+                            95% are false positives.
+                        </p>
+                        <p>
+                            <strong class="text-white">Reactive vs Proactive:</strong> By the time specific rules
+                            trigger (e.g., "$5,000 threshold"), the money is already gone.
+                        </p>
+                        <blockquote class="border-l-2 border-slate-700 pl-4 italic text-slate-500">
+                            "Client deposits $500, trades for 10 minutes with $0.01 profit, then withdraws. That's
+                            laundering. But rules miss it."
+                        </blockquote>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-white flex items-center gap-3">
+                        <i data-lucide="target" class="text-blue-500"></i> The Challenge
+                    </h2>
+                    <p class="text-slate-400 mb-6">
+                        How might we build an AI system that detects money laundering in <strong
+                            class="text-white">real-time</strong> while turning 2,000 weekly alerts into 50
+                        high-confidence cases?
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 shrink-0 mt-1"></i>
+                            <span class="text-slate-300">Minimise false positives to prevent analyst burnout.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 shrink-0 mt-1"></i>
+                            <span class="text-slate-300">Explainable AI: Tell regulators *why* it's suspicious.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-emerald-500 shrink-0 mt-1"></i>
+                            <span class="text-slate-300">Unsupervised Learning: Find fraud types nobody has seen
+                                yet.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer class="absolute bottom-6 text-slate-600 text-xs font-mono text-center w-full">
-        &copy; 2024 Sentinel-Node X. All Monitoring Active. System Status: <span class="text-emerald-500">ONLINE</span>
+    <!-- The Solution -->
+    <section id="solution" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-blue-500 font-bold tracking-widest uppercase text-sm">The Innovation</span>
+                <h2 class="text-4xl md:text-5xl font-black mt-3">What Will Blow Your Mind</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="git-branch" class="text-blue-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Star Topology Graph</h3>
+                    <p class="text-slate-400 text-sm">
+                        "This fraud ring has 47 linked accounts we didn't know about." Visualizes shared IPs, devices,
+                        and velocity conflicts instantly.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 border border-emerald-500/20 glow">
+                    <div class="w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="brain-circuit" class="text-emerald-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Soft Computing Engine</h3>
+                    <p class="text-slate-400 text-sm">
+                        Uses Fuzzy Logic (Z-Scores) instead of rigid rules. Catches the $0.01 profit laundering that
+                        rules miss because it looks "technically" normal.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="clock" class="text-purple-400 w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Temporal Intelligence</h3>
+                    <p class="text-slate-400 text-sm">
+                        "This account's behavior changed dramatically 72 hours after KYC." Tracks patterns over time,
+                        not just single transactions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Team -->
+    <footer class="py-12 border-t border-slate-800 bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-slate-800 border-2 border-slate-700 overflow-hidden">
+                    <div class="w-full h-full bg-gradient-to-tr from-blue-500 to-purple-600"></div>
+                </div>
+                <div>
+                    <div class="font-bold text-white">Fazal Shaik</div>
+                    <div class="text-xs text-slate-500 uppercase tracking-widest">Lead Engineer & Patent Holder</div>
+                </div>
+            </div>
+            <div class="text-sm text-slate-500 font-mono">
+                &copy; 2024 Sentinel-Node X. Built for the Future of Compliance.
+            </div>
+        </div>
     </footer>
 
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
+
 </html>
