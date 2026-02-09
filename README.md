@@ -1,10 +1,20 @@
-# Sentinel-Node X 🛡️
+# 👨‍💻 About the Engineer
+**Fazal Shaik** | Lead Engineer & Patent Holder  
+*Master’s in Data Science & AI/ML*  
+**Portfolio:** [fazalportfolio-orcin.vercel.app](https://fazalportfolio-orcin.vercel.app/)
 
+> "I didn't just build a 'hackathon project.' I built a **High-Concurrency Compliance Orchestrator** capable of auditing **1 million transactions in 135 minutes**. My patent background in real-time tracking (**No. 202441077282**) allowed me to create a system that catches 'Machine Speed' attacks that standard rules completely miss."
+
+---
+
+# Sentinel-Node X 🛡️
 ### High-Concurrency Autonomous Compliance & Risk Orchestrator
+
+[![Watch the Live Demo](assets/dashboard_1.png)](https://youtu.be/XRd9pT9X-dA)
+*Click the image above to watch the system in action.*
 
 **Benchmark:** 🚀 **1,147.95 TPS** (Verified via .NET 8 Stress Bridge)  
 **Efficiency:** 📉 **97.5% Reduction in Alert Fatigue** (2,000 alerts ➡️ 50 Urgent Cases)  
-**Core Authority:** Developed by a **Patent Holder** (App No: 202441077282) & Govt. Funded AI Innovator.
 
 ---
 
@@ -16,7 +26,7 @@ Traditional compliance uses "Hard Rules" (e.g., $5,000 limit) which are easily b
 *   **0.5 - 0.9 (Medium Risk):** Triggers multi-agent investigation and issues user warnings.
 *   **0.9 - 1.0 (Critical):** Instant autonomous account freeze/deletion to prevent fund flight.
 
-![Dashboard Preview](assets/dashboard_1.png)
+![Architecture Diagram](assets/sentinel_architecture.png)
 
 ---
 
@@ -56,11 +66,3 @@ Most rules miss $0.01 profit trades used for laundering. Sentinel-Node X detects
 
 **Live Demo:** [Watch the System in Action](https://youtu.be/XRd9pT9X-dA)  
 **Pitch Deck:** [Video Technical Breakdown](https://youtu.be/NVm6c1Ti4Ik)
-
----
-
-### 🏁 About the Engineer
-**Fazal Shaik** | Lead Engineer & Patent Holder  
-*Master’s in Data Science & AI/ML*  
-
-> "I didn't just build a 'hackathon project.' I built a High-Concurrency Compliance Orchestrator capable of auditing 1 million transactions in 135 minutes. My patent background in real-time tracking (No. 202441077282) allowed me to create a system that catches 'Machine Speed' attacks that standard rules completely miss."
