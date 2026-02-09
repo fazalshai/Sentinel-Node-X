@@ -24,7 +24,8 @@ def get_dynamic_attack():
 
 rows = []
 for i in range(TOTAL_ALERTS):
-    is_attack = np.random.random() < ATTACK_RATE
+    # FORCE first 100 to be attacks (Deterministic Demo)
+    is_attack = i < 100 
     
     if is_attack:
         # Generate a fresh, unique attack
