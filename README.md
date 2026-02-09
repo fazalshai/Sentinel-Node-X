@@ -3,28 +3,17 @@
 *Master’s in Data Science & AI/ML*  
 **Portfolio:** [fazalportfolio-orcin.vercel.app](https://fazalportfolio-orcin.vercel.app/)
 
-> "I didn't just build a 'hackathon project.' I built a **High-Concurrency Compliance Orchestrator** capable of auditing **1 million transactions in 135 seconds**. My patent background in real-time tracking (**No. 202441077282**) allowed me to create a system that catches 'Machine Speed' attacks that standard rules completely miss."
+> "I didn't just build a 'hackathon project.' I built a **High-Concurrency Compliance Orchestrator** capable of auditing **1 million transactions in 135 minutes**. My patent background in real-time tracking (**No. 202441077282**) allowed me to create a system that catches 'Machine Speed' attacks that standard rules completely miss."
 
 ---
+
+[![Sentinel-Node X Live Demo](assets/dashboard_1.png)](https://youtu.be/XRd9pT9X-dA)
 
 # Sentinel-Node X 🛡️
 ### High-Concurrency Autonomous Compliance & Risk Orchestrator
 
-[![Live Demo](assets/dashboard_1.png)](https://youtu.be/XRd9pT9X-dA)  
-*Click to Watch the Live System in Action (1,147 TPS)*
-
 **Benchmark:** 🚀 **1,147.95 TPS** (Verified via .NET 8 Stress Bridge)  
 **Efficiency:** 📉 **97.5% Reduction in Alert Fatigue** (2,000 alerts ➡️ 50 Urgent Cases)  
-
----
-
-## 📸 System Architecture & Dashboards
-
-| **Real-Time Funnel** | **Network Graph** |
-|:---:|:---:|
-| [![Funnel](assets/dashboard_1.png)](https://youtu.be/XRd9pT9X-dA) | [![Graph](assets/dashboard_3.png)](https://youtu.be/XRd9pT9X-dA) |
-| **High-Risk Case Files** | **AI Reasoning Engine** |
-| [![Cases](assets/dashboard_2.png)](https://youtu.be/XRd9pT9X-dA) | [![Architecture](assets/sentinel_architecture.png)](https://youtu.be/XRd9pT9X-dA) |
 
 ---
 
@@ -35,6 +24,8 @@ Traditional compliance uses "Hard Rules" (e.g., $5,000 limit) which are easily b
 *   **0.0 - 0.5 (Low Risk):** Behavioral baseline is stable.
 *   **0.5 - 0.9 (Medium Risk):** Triggers multi-agent investigation.
 *   **0.9 - 1.0 (Critical):** Instant autonomous account freeze.
+
+![System Architecture](assets/sentinel_architecture.png)
 
 ---
 
@@ -54,6 +45,8 @@ Uses statistical **Z-Scores** to detect behavioral drift.
 
 ### 3. Machine-Speed (Structuring) Detection
 Most rules miss $0.01 profit trades used for laundering. Sentinel-Node X detects the **Frequency**, flagging any activity exceeding Machine-Speed thresholds (1,000+ per second).
+
+![High-Risk Case Files](assets/dashboard_2.png)
 
 ---
 
