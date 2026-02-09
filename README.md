@@ -25,7 +25,7 @@ Traditional compliance uses "Hard Rules" (e.g., $5,000 limit) which are easily b
 *   **0.5 - 0.9 (Medium Risk):** Triggers multi-agent investigation.
 *   **0.9 - 1.0 (Critical):** Instant autonomous account freeze.
 
-![System Architecture](assets/sentinel_architecture.png)
+![System Architecture](assets/dashboard_2.png)
 
 ---
 
